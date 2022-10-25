@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+	<body>
+	 <style>
+	 table {border-collapse: collapse;}
+	 td {text-align: center;}
+	 th {text-align: center;}
+	 </style>
+	 
+	<table border=3; align="center"; style="border: 3xp solid black">
+	
+	<caption>Grade 9 - Potassium Class Schedule</caption>
+	
+	<colgroup>
+		<col style="border: 1px solid black">
+		<col style="border: 1px solid black">
+		<col style="border: 1px solid black">
+		<col style="border: 1px solid black">
+		<col style="border: 1px solid black">
+		<col style="border: 1px solid black">
+	</colgroup>
+	<colgroup>
+		<col style="border: 1px solid black">
+		<col style="border: 1px solid black">
+		<col style="border: 1px solid black">
+		<col style="border: 1px solid black">
+		<col style="border: 1px solid black">
+		<col style="border: 1px solid black">
+	</colgroup>
+	
+		<tr>
+		    <colgroup>
+			    <th rowspan="2" style="padding:20px">Time</th>
+			</colgroup>
+		</tr>
+		<tr>
+			<th style="width:150px">Monday</th>
+			<th style="width:150px">Tuesday</th>
+			<th style="width:150px">Wednesday</th>
+			<th style="width:150px">Thursday</th>
+			<th style="width:150px">Friday</th>
+		</tr>
+		<tr>
+			<th style="padding:10px">7:15 AM - 8:05 AM</th>
+			<td>Flag Raising</td>
+			<td style="background-color: #9af569">Biology 1</td>
+			<td style="background-color: #a5aec9">Health 3</td>
+			<td style="background-color: #78c4f0">Music 3</td>
+			<td style="background-color: #9af569">Biology 1</td>
+		</tr>
+		<tr>
+			<th style="padding:10px">8:10 AM - 9:00 AM</th>
+			<td>HRA</td>
+			<td style="background-color: #fa7e75">ValEd 3</td>
+			<td style="background-color: #fa75b1">Chemistry 1</td>
+			<td style="background-color: #fa75b1">Chemistry 1</td>
+			<td style="background-color: #fa75b1">Chemistry 1</td>
+		</tr>
+		<tr>
+			<th style="padding:10px">9:05 AM - 9:55 AM</th>
+			<td style="background-color: #fac075">Math 3</td>
+			<td style="background-color: #fac075">Math 3</td>
+			<td style="background-color: #fac075">Math 3</td>
+			<td style="background-color: #c975fa">Filipino 3</td>
+			<td style="background-color: #fa7e75">ValEd 3</td>
+		</tr>
+		<tr>
+			<colgroup>
+				<th style="padding:10px">9:55 AM - 10:25 AM</th>
+				<th colspan="5" style="background-color:#484444; color:white">Morning Break</th>
+			</colgroup>
+		</tr>
+		<tr>
+			<th style="padding:10px">10:25 AM - 11:15 AM</th>
+			<td style="background-color: #9af569">Biology 1</td>
+			<td style="background-color: #7be0ba">PE 3</td>
+			<td style="background-color: #f5f069">Physics 1</td>
+			<td style="background-color: #f5f069">Physics 1</td>
+			<td style="background-color: #f5f069">Physics 1</td>
+		</tr>
+		<tr>
+			<th style="padding:10px">11:20 AM - 12:10 PM</th>
+			<td style="background-color: #74dbf7">SocSci 3</td>
+			<td style="background-color: #c975fa">Filipino 3</td>
+			<td style="background-color: #74dbf7">SocSci 3</td>
+			<td style="background-color: #74dbf7">SocSci 3</td>
+			<td style="background-color: #c975fa">Filipino 3</td>
+		</tr>
+		<tr>
+			<colgroup>
+				<th style="padding:10px">12:10 PM - 1:00 PM</th>
+				<th colspan="5" style="background-color:#484444; color:white">Lunch Break</th>
+			</colgroup>
+		</tr>
+		<tr>
+			<th style="padding:10px">1:00 PM - 1:50 PM</th>
+			<td style="background-color: #f078da">English 3</td>
+			<td style="background-color: #f09cb8">ComSci 3</td>
+			<td style="background-color: #f09cb8">ComSci 3</td>
+			<td style="background-color: #f09cb8">ComSci 3</td>
+		</tr>
+		<tr>
+			<th style="padding:10px">1:55 PM - 2:45 PM</th>
+			<td style="background-color: #c1f551">Statistics 1</td>
+			<td style="background-color: #c1f551">Statistics 1</td>
+			<td style="background-color: #f078da">English 3</td>
+			<td style="background-color: #f078da">English 3</td>
+		</tr>
+		<tr>
+			<th style="padding:10px">2:50 PM - 3:40 PM</th>
+			<td rowspan="2" style="padding-left:10px; padding-right:10px">Consultation Period</td>	
+			<td colspan="2" style="padding-left:10px; padding-right:10px">Consultation Period</td>	
+			<td style="background-color: #c1f551">Statistics 1</td>
+		</tr>
+		<tr>
+			<th style="padding:10px">3:45 PM - 4:35 PM</th>
+			<td style="background-color: ">ALA</td>
+			<td style="background-color: ">ALA</td>
+			<td style="padding:10px; background-color: "></td>
+		</tr>
+	</table>
+	</body>
+
+</html>
