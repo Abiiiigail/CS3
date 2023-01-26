@@ -9,12 +9,12 @@ h1 {
 	margin-bottom:15px;
 } 
 
-.section {
+section {
 	width:33.33%;
 	float:left;
 }
 
-.article {
+article {
 	position:relative;
 	border:1px solid black; 
 	margin-left:10px; 
@@ -38,11 +38,11 @@ p {
 	margin-right:5px;
 } 
 
-#beef { 
+#chicken { 
 	background-color:blue;
 }
 
-#chicken {
+#beef {
 	background-color:yellow;
 }
 
