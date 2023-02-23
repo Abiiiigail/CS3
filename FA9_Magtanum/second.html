@@ -1,0 +1,24 @@
+<DOCTYPE! html>
+<html>
+<head>
+</head>
+<body>
+
+	<img id="yuu" src="img2.jpg" width=550px>
+	
+	<button onclick="replaceImage()">Click to replace the image</button>
+	<button onclick="revertImage()">Revert back to the original image</button>
+	<script>
+		function replaceImage() {
+			document.getElementById("yuu").src = "img1.png";
+		}
+		
+		function revertImage() {
+			document.getElementById("yuu").src = "img2.jpg";
+		}
+	</script>
+	
+	
+	
+</body>
+</html>
