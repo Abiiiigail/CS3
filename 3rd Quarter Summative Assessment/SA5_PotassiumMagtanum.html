@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> My Online Shop</title>
+    <!-- type in the necessary meta tags -->
+	<meta charset="UTF-8">
+	<meta name="author" content="Magtanum">
+	<meta name="viewport" content="width=device-width, initial scale=1.0">
+	<style>
+      span {color: blue; text-decoration:underline}
+      button {width: 100px; padding: 5px; background: pink;}
+	</style>
+
+	</head>
+<body>
+	<h1> Welcome to My Online Shop </h1>
+	<h2> Please select from the following items </h2>
+	<!--- provide your own 3 items and their prices in the list --->
+	<ol>
+		<li><b>Ako</b> price: 10.00 </li>
+		<li><b>Siya</b> price: 100.00 </li>
+		<li><b>Ikaw</b> price: 1000.00 </li>
+	</ol>
+	<!-- the following will be used to display purchase information -->
+    <p> Item selected : <span id="item"> </span> </p>
+	<p> Qty bought : <span id="qty"> </span> </p>
+	<p> Amount to pay for the item: <span id="bill"> </span> </p>
+	<p> Current Total Bill <span id="tbill"> </span> </p>
+	<button onclick="buy()"> Buy an Item </button>
+	<button onclick="cl()"> Clear </button>
+    
+    <script>
+    	/* do not forget to include comments in your answer */
+        var Ako = 10.00;
+        var Siya = 100.00;
+        var Ikaw = 1000.00;
+        var totalBill = 0;
+        
+        function buy() {
+            let itemAmount = prompt("Enter the number of the item you would like to buy (1-3)");
+            let qty = prompt("Enter quantity of items");
+            if (!checkQty(qty)) {
+                return;
+            }
+            let bill = 0;
+            switch (itemAmount) {
+                case "1":
+                    bill = qty * Ako;
+                    break;
+                case "2":
+                    bill = qty * Siya;
+                    break;
+                case "3":
+                    bill = qty * Ikaw;
+                    break;
+                default:
+                    alert("No item of this number can be found");
+                    return;
+            }
+            document.getElementById("item").innerHTML = "Item " + itemAmount;
+            document.getElementById("qty").innerHTML = qty;
+            document.getElementById("bill").innerHTML = "₱" + bill.toFixed(2);
+			totalBill += bill;
+            document.getElementById("tbill").innerHTML = "₱" + totalBill.toFixed(2);
+        }
+     
+        function checkQty(qty) {
+            if (!Number.isInteger(parseInt(qty))) {
+                alert("Number of quantity entered must be an integer");
+                return false;
+            }
+            return true;
+        }
+		
+        function cl() {
+            document.getElementById("item").innerHTML = "";
+            document.getElementById("qty").innerHTML = "";
+            document.getElementById("bill").innerHTML = "";
+            document.getElementById("tbill").innerHTML = "";
+            totalBill = 0;
+        }
+    </script>
+</body>
+</html>

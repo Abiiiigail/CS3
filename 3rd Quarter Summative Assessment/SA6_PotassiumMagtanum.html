@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>One Time Password </title>
+		<!-- provide the necessary meta tags -->
+		<meta charset="UTF-8">
+		<meta name="author" content="Magtanum">
+		<meta name="viewport" content="width=device-width, initial scale=1.0">
+        <style>
+        	body {background: lightblue; 
+            	text-align: center;
+            	font-family: arial;
+                color: navy;
+            }
+            button {padding: 10px; background:violet }
+            a {font-size: 0.5em; color: maroon}
+        </style>
+
+	</head>
+<body onload="OTP()">
+	<h1> Final Verification Step </h1>
+	<h2> Current OTP: <span id="otp"> _ _ _ _ _ _ <span> <a href=""> New OTP </a></h2>
+    <button onclick="a()"> Enter the OTP as shown above </button>
+    
+    <script>
+    	/* do not forget to include comments in your answer */
+		var otp;
+		function OTP() {
+			/* function for the randomly generated otp */
+			otp = (Math.random() * 1000000).toFixed(0);	
+			document.getElementById("otp").innerHTML=otp;
+		}
+		
+		function a() {
+			/* function where to enter otp */
+		var a = prompt("Enter One-Time Password");
+		/* if entered otp is correct it will open a new tab */
+			if(parseInt(a) === parseInt(otp)) {
+				window.open("https://khub.src.pshs.edu.ph/login/index.php");
+			}
+		/* if not, the alert will pop up stating incorrect password */
+			else {
+				alert("Incorrect Password, Please Try Again");
+				OTP();
+			}
+		}
+    </script>
+</body>
+</html>
+
