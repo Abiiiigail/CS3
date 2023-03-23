@@ -31,17 +31,21 @@
     
     <script>
     	/* do not forget to include comments in your answer */
+        /* List of products being sold in shop */
         var Ako = 10.00;
         var Siya = 100.00;
         var Ikaw = 1000.00;
         var totalBill = 0;
-        
+        /* Function where in the person buying from the shop picks what item they would purchase */
         function buy() {
             var itemAmount = prompt("Enter the number of the item you would like to buy (1-3)");
+        /* To determine how many of said item will be purchased */
             var qty = prompt("Enter quantity of items");
+        /* To check if the number input for quantity was an integer or not */
             if (!checkQty(qty)) {
                 return;
             }
+        /* Prices multiplied by how many is bought from the shop */
             var bill = 0;
             switch (itemAmount) {
                 case "1":
@@ -57,13 +61,15 @@
                     alert("No item of this number can be found");
                     return;
             }
+        /* so that the item, quantity, and bill will be shown in the screen */
             document.getElementById("item").innerHTML = "Item " + itemAmount;
             document.getElementById("qty").innerHTML = qty;
             document.getElementById("bill").innerHTML = "₱" + bill.toFixed(2);
 			totalBill += bill;
             document.getElementById("tbill").innerHTML = "₱" + totalBill.toFixed(2);
         }
-     
+
+        /* A function to check if the number entered in quantity is an integer and is valid or not */
         function checkQty(qty) {
             if (!Number.isInteger(parseInt(qty))) {
                 alert("Number of quantity entered must be an integer");
@@ -71,7 +77,7 @@
             }
             return true;
         }
-		
+	/* function to make the button "clear" clear all that was entered before and reset the page */	
         function cl() {
             document.getElementById("item").innerHTML = "";
             document.getElementById("qty").innerHTML = "";
