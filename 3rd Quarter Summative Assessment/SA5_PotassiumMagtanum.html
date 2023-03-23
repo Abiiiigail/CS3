@@ -37,12 +37,12 @@
         var totalBill = 0;
         
         function buy() {
-            let itemAmount = prompt("Enter the number of the item you would like to buy (1-3)");
-            let qty = prompt("Enter quantity of items");
+            var itemAmount = prompt("Enter the number of the item you would like to buy (1-3)");
+            var qty = prompt("Enter quantity of items");
             if (!checkQty(qty)) {
                 return;
             }
-            let bill = 0;
+            var bill = 0;
             switch (itemAmount) {
                 case "1":
                     bill = qty * Ako;
