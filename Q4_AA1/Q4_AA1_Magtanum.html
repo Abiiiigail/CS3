@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Genetic Coding
+        </title>
+    </head>
+    <body onload="genCod()">
+        <script>
+            var codons = [ 
+                        ["AUG"],
+                        ["UGA", "UAA", "UAG"], 
+                        ["UUA", "UUG", "CUU", "CUC", "CUA","CUG"], 
+                        ["CGU", "CGC", "CGA", "CGG", "AGA", "AGG"], 
+                        ["UCU", "UCC", "UCA", "UCG", "AGU", "AGC"], 
+                        ["GGU", "GGC", "GGA", "GGG"], 
+                        ["GUU", "GUC", "GUA", "GUG"], 
+                        ["CCU", "CCC", "CCA", "CCG"], 
+                        ["ACU", "ACC", "ACA", "ACG"], 
+                        ["GCU", "GCC", "GCA", "GCG"], 
+                        ["AUU", "AUC", "AUA"], 
+                        ["UUU", "UUC"], 
+                        ["UAU", "UAC"], 
+                        ["CAU", "CAC"], 
+                        ["CAA", "CAG"], 
+                        ["AAU", "AAC"], 
+                        ["AAA", "AAG"], 
+                        ["GAU", "GAC"], 
+                        ["GAA", "GAG"], 
+                        ["UGU", "UGC"], 
+                        ["UGG"]  
+                        ]
+            var amacid = ["Met", "STOP", "Leu", "Arg", "Ser", "Gly", "Val", "Pro", "Thr", "Ala", "Ile", "Phe", "Tyr", "His", "Gln", "Asn", "Lys", "Asp", "Glu", "Cys", "Trp" ];
+
+            function genCod() {
+                let RNA = prompt("Enter RNA sequence"," ");
+                let arr = [];
+                let amino = [];
+                var strcodon;
+
+                for(let i =0; i < RNA.length - 2; i++) {
+                    let codon = RNA.substring(i, i+3);
+                    if (codon == "AUG") {
+                        RNA = RNA.slice(i);
+                        strcodon = true;
+                        break;
+                    }
+                }
+
+                if (!strcodon) {
+                    document.write("\n <br> [No Starting Codon Entered]");
+                    return;
+                }
+
+                for (let i=0;i<RNA.length - 2; i+=3) {
+                    let codon = RNA.substring(i, i+3);
+                    if (codon == "UGA" || codon == "UAA" || codon == "UAG"){
+                        RNA = RNA.slice(0, 1+3);
+                        break;
+                    }
+                }
+
+                for (let i = 0; i < RNA.length - 2; i+=3) {
+                let codon = RNA.substring(i, i+3);
+                let acidAmino;
+                for (let j = 0; j < codons.length; j++) {
+                    if (codons[j].includes(codon)) {
+                        acidAmino = amacid[j];
+                        break;
+                    }
+                }
+                arr.push(codon);
+                amino.push(acidAmino);
+                }
+
+                document.write("\n <br> [" + arr.join(", ") + "]");
+                for (let i = 0; i < arr.length; i++) {
+                document.write("\n <br>" + arr[i] + " ---> " + amino[i]);
+                }
+            }
+        </script>
+    </body>
+</html>
